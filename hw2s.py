@@ -1,44 +1,35 @@
-# def createMatrix(rowCount, colCount, dataList) :
-#     mat= []
-#     for i in range (rowCount):
-#         rowList = []
-#         for j in range (colCount) :
-#             if dataList[j] not in mat:
-#                 rowList.append(dataList[j])
-#         mat.append(rowList)
-#
-#     return mat
-#
-# def substactBase(matr_a, matr_b):
-#     # """return matrix that is a result of subtracting two square matrices"""
-#     output = []
-#     for idx in xrange(len(matr_a)):
-#         tmp = []
-#         for valA, valB in zip(matr_a[idx], matr_b[idx]):
-#             tmp.append(valA - valB)
-#         output.append(tmp[:])
-#     return output[:]
+num = input('enter amount of matrices you would like to add, subtract, or multiply ')
+matricesList = ['d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+a=[]
+b=[]
+c=[]
 
 def matrices():
-    a = input('enter first matrices ')
+    a = input('enter first matrix ')
     a = a.split(',')
-    b = input('enter second matrices ')
+    b = input('enter second matrix ')
     b = b.split(',')
-    c = input('enter third matrices ')
+    c = input('enter third matricx ')
     c = c.split(',')
 
-matrices()
+for x in range(1,int(num)+1):
+  matrices()
+  for x in range(0, int(num)):
+      if len(a) == len(b) and len(b) == len(c):
+          matricesList[x]=[]
+          matricesList[x].append(a)
+          matricesList[x].append(b)
+          matricesList[x].append(c)
 
-if len(a) == len(b) and len(b) == len(c):
-    d=[]
-    d.append(a)
-    d.append(b)
-    d.append(c)
+          print(d)
+          print(e)
+          print(f)
 
-    for row in d:
-        for elem in row:
-            print(elem, end=' ')
-        print()
-else:
-    print('the quantity of numbers in the matrix should be consistent with other matrices')
-    matrices()
+#
+#     for row in d:
+#         for elem in row:
+#             print(elem, end=' ')
+#         print()
+# else:
+#     print('the quantity of numbers in the matrix should be consistent with other matrices')
+#     matrices()
