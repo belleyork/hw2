@@ -19,12 +19,15 @@
 #         output.append(tmp[:])
 #     return output[:]
 
-a = input('enter first matrices ')
-a = a.split(',')
-b = input('enter second matrices ')
-b = b.split(',')
-c = input('enter third matrices ')
-c = c.split(',')
+def matrices():
+    a = input('enter first matrices ')
+    a = a.split(',')
+    b = input('enter second matrices ')
+    b = b.split(',')
+    c = input('enter third matrices ')
+    c = c.split(',')
+
+matrices()
 
 if len(a) == len(b) and len(b) == len(c):
     d=[]
@@ -38,3 +41,4 @@ if len(a) == len(b) and len(b) == len(c):
         print()
 else:
     print('the quantity of numbers in the matrix should be consistent with other matrices')
+    matrices()
