@@ -37,4 +37,4 @@ if len(a) == len(b) and len(b) == len(c):
             print(elem, end=' ')
         print()
 else:
-    print('the numbers should be consistent')
+    print('the quantity of numbers in the matrix should be consistent with other matrices')
