@@ -19,12 +19,19 @@
 #         output.append(tmp[:])
 #     return output[:]
 
-a = input('enter first matrices')
-b = input('enter second matrices')
-c = input('enter third matrices')
+a = input('enter first matrices ')
+a = a.split(',')
+b = input('enter second matrices ')
+b = b.split(',')
+c = input('enter third matrices ')
+c = c.split(',')
 
-d =
-for row in a:
+d=[]
+d.append(a)
+d.append(b)
+d.append(c)
+
+for row in d:
     for elem in row:
         print(elem, end=' ')
     print()
