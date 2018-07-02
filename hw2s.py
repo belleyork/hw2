@@ -19,7 +19,11 @@
 #         output.append(tmp[:])
 #     return output[:]
 
-a = [[1, 2, 3, 4], [5, 6], [7, 8, 9]]
+a = input('enter first matrices')
+b = input('enter second matrices')
+c = input('enter third matrices')
+
+d =
 for row in a:
     for elem in row:
         print(elem, end=' ')
