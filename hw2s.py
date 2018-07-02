@@ -26,12 +26,15 @@ b = b.split(',')
 c = input('enter third matrices ')
 c = c.split(',')
 
-d=[]
-d.append(a)
-d.append(b)
-d.append(c)
+if len(a) == len(b) and len(b) == len(c):
+    d=[]
+    d.append(a)
+    d.append(b)
+    d.append(c)
 
-for row in d:
-    for elem in row:
-        print(elem, end=' ')
-    print()
+    for row in d:
+        for elem in row:
+            print(elem, end=' ')
+        print()
+else:
+    print('the numbers should be consistent')
