@@ -11,7 +11,7 @@ if num < 27:
         a = list(map(float, a.split(',')))
         b = input('enter second matrix ')
         b = list(map(float, b.split(',')))
-        c = input('enter third matricx ')
+        c = input('enter third matrix ')
         c = list(map(float, c.split(',')))
 
         if len(a) == len(b) and len(b) == len(c):
@@ -29,11 +29,11 @@ if num < 27:
         'Would you like to add, subtract, or multiply your matrices? ')
 
     if answer == 'add':
-        for i in range(len(d)):
-            for j in range(len(d[0])):
-                for l in range(len(numList)):
-                    print(numList[l])
-                    # result[i][j] = result[i][j] + numList[l][i][j]
+        for l in range(len(numList)):
+            for i in range(len(result)):
+                for j in range(len(d[0])):
+                    newlist = vars()[numList[l]][i]
+                    result[i][j] = result[i][j] + newlist[j]
 
         print(result)
 else:
