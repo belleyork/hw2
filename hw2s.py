@@ -5,7 +5,7 @@ matricesList = ['d', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
 result = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
 numList = []
 
-if num < 27:
+if num < 23 and num > 1:
     for x in range(0, num):
         a = input('enter first matrix ')
         a = list(map(float, a.split(',')))
@@ -28,13 +28,21 @@ if num < 27:
     answer = input(
         'Would you like to add, subtract, or multiply your matrices? ')
 
-    if answer == 'add':
-        for l in range(len(numList)):
-            for i in range(len(result)):
-                for j in range(len(d[0])):
-                    newlist = vars()[numList[l]][i]
-                    result[i][j] = result[i][j] + newlist[j]
+    if answer == 'm':
+        result = [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
 
-        print(result)
+    for l in range(len(numList)):
+        for i in range(len(result)):
+            for j in range(len(d[0])):
+                newlist = vars()[numList[l]]
+                if answer == 'a':
+                    result[i][j] = result[i][j] + newlist[i][j]
+                if answer == 's':
+                    result[i][j] = result[i][j] - newlist[i][j]
+                if answer == 'm':
+                    result[i][j] = result[i][j] * newlist[i][j]
+
+    for r in result:
+        print(r)
 else:
-    print('please choose an amount less than 27')
+    print('please choose an amount less than 27 and greater than 1')
