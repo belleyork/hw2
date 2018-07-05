@@ -1,7 +1,9 @@
 num = int(
     input('enter amount of matrices you would like to add, subtract, or multiply '))
+    #converts strings of numbers entered by users into integers
 matricesList = ['d', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
                 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+                #allows user to do math with up to 22 different matrices
 result = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
 numList = []
 a = [0, 0, 0]
@@ -10,7 +12,7 @@ c = [0, 0, 0]
 
 if num < 23 and num > 1:
     for x in range(0, num):
-        if len(a) == 3 and len(b) == 3 and len(c) == 3:
+        if len(a) == 3 and len(b) == 3 and len(c) == 3: #prompts user to type in the different matrixes
             a = input('enter first matrix ')
             a = list(map(float, a.split(',')))
             b = input('enter second matrix ')
@@ -21,7 +23,7 @@ if num < 23 and num > 1:
             print('please type in 3 numbers')
             exit()
 
-        if len(a) == len(b) and len(b) == len(c):
+        if len(a) == len(b) and len(b) == len(c): #appends matrixes to create 3x3 matrices
             numList.append(matricesList[x])
             vars()[matricesList[x]] = []
 
@@ -35,10 +37,10 @@ if num < 23 and num > 1:
     answer = input(
         'Would you like to add, subtract, or multiply your matrices? ')
 
-    if answer == 'multiply':
+    if answer == 'multiply': #changes the results to 1's because you cant do multiplication with 0
         result = [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
 
-    if answer == 'add' or answer == 'subtract' or answer == 'multiply':
+    if answer == 'add' or answer == 'subtract' or answer == 'multiply': #does the math of the matrices
         for l in range(len(numList)):
             for i in range(len(result)):
                 for j in range(len(d[0])):
